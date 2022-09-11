@@ -2,7 +2,7 @@
 
 /**
  * Description: Write a string using puts function
- * main: entry point
+ * main-entry point
  * Return: 0 if successful
 */
 
