@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Write a string using puts function
+ * Description: Write a string using puts function
  * main: entry point
  * Return: 0 if successful
 */
