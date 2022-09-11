@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - entry point
  * @void: emtpy
@@ -7,7 +6,6 @@
  * Description: Print the size of various types of vars
  * Return: 0
 */
-
 int main(void)
 {
 char c;
