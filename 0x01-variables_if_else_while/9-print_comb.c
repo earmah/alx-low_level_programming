@@ -15,10 +15,10 @@ int main(void)
 	val++;
 	while (val < 58)
 	{
-		putchar(44);
-		putchar(32);
+		putchar(44,32);
 		putchar(val);
 		val++;
 	}
+	putchar('\n');
 	return (0);
 }
