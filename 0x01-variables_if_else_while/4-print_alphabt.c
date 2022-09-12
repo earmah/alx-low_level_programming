@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int ch_val;
+	int ch_val = 97;
 	char nl = '\n';
 
 	while (ch_val < 123)
