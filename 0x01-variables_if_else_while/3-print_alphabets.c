@@ -9,18 +9,18 @@
 int main(void)
 {
 	int ch_val = 97;
-	int big_ch = 65;
+	int big_val = 65;
 	char nl = '\n';
 
-	while (big_ch < 91)
-	{
-		putchar(big_ch);
-		big_ch++;
-	}
 	while (ch_val < 123)
 	{
 		putchar(ch_val);
 		ch_val++;
+	}
+	while (big_val < 91)
+	{
+		putchar(big_val);
+		big_val++;
 	}
 	putchar(nl);
 	return (0);
