@@ -10,7 +10,7 @@
 int main(void)
 {
 	int alpha = 122;
-	char nl = '\n'
+	char nl = '\n';
 
 	while (alpha > 96)
 	{
