@@ -8,7 +8,6 @@
  */
 int main(void)
 {
-	char alpha;
 	int ch_val = 97;
 
 	while (ch_val < 123)
