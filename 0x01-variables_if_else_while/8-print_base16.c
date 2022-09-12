@@ -19,7 +19,7 @@ int main(void)
 	}
 	while (ch2_val < 103)
 	{
-		putchr(ch2_val);
+		putchar(ch2_val);
 		ch2_val++;
 	}
 	putchar('\n');
