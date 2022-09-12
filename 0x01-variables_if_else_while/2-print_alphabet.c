@@ -9,12 +9,13 @@
 int main(void)
 {
 	int ch_val = 97;
+	char nl = "\n"
 
 	while (ch_val < 123)
 	{
 		putchar(ch_val);
 		ch_val++;
 	}
-	putchar("\n");
+	putchar(nl);
 	return (0);
 }
