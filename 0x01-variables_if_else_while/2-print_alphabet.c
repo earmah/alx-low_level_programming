@@ -8,7 +8,13 @@
  */
 int main(void)
 {
-	char alpha = 'abcdefghijklmnopqrstuvwxyz';
+	char alpha;
+	int ch_val = 97;
 
-	putchar(alpha);
+	while (ch_val < 123)
+	{
+		putchar(ch_val);
+		ch_val++;
+	}
+	return (0);
 }
