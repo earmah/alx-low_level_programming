@@ -9,7 +9,7 @@
 int main(void)
 {
 	int ch_val;
-	int nl = '\n';
+	char nl = '\n';
 
 	while (ch_val < 123)
 	{
