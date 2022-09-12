@@ -26,6 +26,7 @@ int main(void)
 			temp = sp;
 			count++;
 		}
+		count = 0;
 		putchar(val);
 		val++;
 	}
