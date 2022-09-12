@@ -11,11 +11,13 @@ int main(void)
 {
 	int val = 48;
 
+	putchar(val);
+	val++;
 	while (val < 58)
 	{
-		putchar(val);
 		putchar(44);
 		putchar(32);
+		putchar(val);
 		val++;
 	}
 	putchar('\n');
