@@ -22,6 +22,7 @@ int main(void)
 			putchar(ch_val);
 			ch_val++;
 		}
+		putchar(nl);
 	}
 	return (0);
 }
