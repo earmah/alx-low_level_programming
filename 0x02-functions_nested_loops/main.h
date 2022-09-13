@@ -9,6 +9,7 @@
 
 int main(void)
 {
+	print_alphabet(void);
 	putchar(95);
 	putchar(112);
 	putchar(117);
@@ -19,4 +20,17 @@ int main(void)
 	putchar(114);
 	putchar('\n');
 	return (0);
+}
+
+void print_alphabet(void)
+{
+	int count = 97;
+
+	while (count < 123)
+	{
+		putchar(count);
+		count++;
+	}
+	putchar('\n');
+	return ;
 }
