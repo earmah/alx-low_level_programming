@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	putchar(45);
+	putchar(95);
 	putchar(112);
 	putchar(117);
 	putchar(116);
