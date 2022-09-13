@@ -3,9 +3,17 @@
  * main - entry point
  * @void: empty
  *
+ * print_alphabet - prints the alphabet
+ * @void: empty
+ *
+ * _putchar - prints name sake
+ * @void: empty
+ *
  * Description -  this is a header file
  * Return: 0
  */
+
+void print_alphabet(void);
 
 int main(void)
 {
