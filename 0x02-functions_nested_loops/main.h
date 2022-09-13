@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	print_alphabet(void);
+	print_alphabet();
 	putchar(95);
 	putchar(112);
 	putchar(117);
