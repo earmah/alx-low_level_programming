@@ -1,40 +1,18 @@
-#include <stdio.h>
+#ifndef <stdio.h>
+#define <stdio.h>
+int _putchar(char c);
+int putchar(char c);
+#endif
+
 /**
  * main - entry point
- * @void: empty
- *
- * print_alphabet - prints the alphabet
- * @void: empty
- *
- * _putchar - prints name sake
  * @void: empty
  *
  * Description -  this is a header file
  * Return: 0
  */
 
-void print_alphabet(void);
-
 int main(void)
-{
-	void print_alphabet(void);
-	return (0);
-}
-
-void print_alphabet(void)
-{
-	int count = 97;
-
-	while (count < 123)
-	{
-		putchar(count);
-		count++;
-	}
-	putchar('\n');
-	return ;
-}
-
-void _putchar(void)
 {
 	putchar(95);
 	putchar(112);
@@ -45,4 +23,5 @@ void _putchar(void)
 	putchar(97);
 	putchar(114);
 	putchar('\n');
+	return (0);
 }
