@@ -19,6 +19,7 @@ void print_alphabet_x10(void)
 			_putchar(count_alpha);
 			count_alpha++;
 		}
+		count_alpha = 97;
 		_putchar('\n');
 		repetition++;
 	}
