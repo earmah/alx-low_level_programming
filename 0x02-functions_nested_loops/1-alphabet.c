@@ -1,7 +1,4 @@
-#ifndef MAIN_H
-#define MAIN_H
-int main(void);
-#endif
+#include "main.h"
 /**
  * print_alphabet - prints the alphabet
  * @void: empty

@@ -1,27 +1,6 @@
-#ifndef <stdio.h>
-#define <stdio.h>
+#ifndef MAIN_H
+#define MAIN_H
 int _putchar(char c);
 int putchar(char c);
+void print_alphabet(void);
 #endif
-
-/**
- * main - entry point
- * @void: empty
- *
- * Description -  this is a header file
- * Return: 0
- */
-
-int main(void)
-{
-	putchar(95);
-	putchar(112);
-	putchar(117);
-	putchar(116);
-	putchar(99);
-	putchar(104);
-	putchar(97);
-	putchar(114);
-	putchar('\n');
-	return (0);
-}
