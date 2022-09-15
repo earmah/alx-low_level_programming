@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * print_alphabet_x10: print the alphabetx10
- * @void: empty
  *
- * Description - print alphabet x10
+ * Description - prints the alphabet
+ * Return: void
  */
 
 void print_alphabet_x10(void)
@@ -18,6 +19,7 @@ void print_alphabet_x10(void)
 			_putchar(count_alpha);
 			count_alpha++;
 		}
+		_putchar('\n');
 		repetition++;
 	}
 }
