@@ -14,10 +14,32 @@ void more_numbers(void)
 	{
 		for (curr_val = 0; curr_val < 15; ++curr_val)
 		{
-			_putchar(curr_val + '0');
+			if (curr_val > 9)
+			{
+				_putchar_long(curr_val);
+			}
+			else
+			{
+				_putchar(curr_val + '0');
+			}
 		}
 		_putchar('\n');
 		curr_val = 0;
 	}
 	_putchar('\n');
+}
+
+/**
+ * putchar_long - converts and prints long ints using putchar
+ * @c: long int
+ * Return: void
+ */
+
+void putchar_long(int c)
+{
+	if (c / 10)
+	{
+		putchar_long(c / 10);
+	}
+	putchar(c % 10 + '0');
 }
