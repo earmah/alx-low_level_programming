@@ -14,14 +14,7 @@ void more_numbers(void)
 	{
 		for (curr_val = 0; curr_val < 15; ++curr_val)
 		{
-			if (curr_val > 9)
-			{
-				_putchar_long(curr_val);
-			}
-			else
-			{
-				_putchar(curr_val + '0');
-			}
+				putchar_long(curr_val);
 		}
 		_putchar('\n');
 		curr_val = 0;
@@ -41,5 +34,5 @@ void putchar_long(int c)
 	{
 		putchar_long(c / 10);
 	}
-	putchar(c % 10 + '0');
+	_putchar(c % 10 + '0');
 }
