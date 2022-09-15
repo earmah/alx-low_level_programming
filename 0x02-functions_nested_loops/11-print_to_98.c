@@ -31,6 +31,6 @@ void print_to_98(int a)
 	}
 	else
 	{
-		_putchar('0' + 98);
+		_putchar('0' + a);
 	}
 }
