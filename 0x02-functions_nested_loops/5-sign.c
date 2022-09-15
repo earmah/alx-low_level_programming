@@ -12,7 +12,7 @@ int print_sign(int n)
 	int neg = 45;
 	int zer = 48;
 
-	if (n == 48)
+	if (n == 0)
 	{
 		_putchar(zer);
 		return (0);
