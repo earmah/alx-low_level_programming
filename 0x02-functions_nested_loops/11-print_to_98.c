@@ -8,15 +8,13 @@
 
 void print_to_98(int a)
 {
-	_putchar('0' + a);
+	printf("%d", a)
 	if (a < 98)
 	{
 		while (a <= 98)
 		{
 			a++;
-			_putchar(',');
-			_putchar(' ');
-			_putchar('0' + a);
+			printf(", %d",a);
 		}
 	}
 	else if (a > 98)
@@ -24,13 +22,12 @@ void print_to_98(int a)
 		while (a >= 98)
 		{
 			a--;
-			_putchar(',');
-			_putchar(' ');
-			_putchar('0' + a);
+			printf(", %d", a);
 		}
 	}
 	else
 	{
-		_putchar('0' + a);
+		printf("");
 	}
+	printf("\n");
 }
