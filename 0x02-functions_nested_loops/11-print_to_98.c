@@ -9,21 +9,28 @@
 void print_to_98(int a)
 {
 	_putchar('0' + a);
-
-	while (a <= 98)
+	if (a < 98)
 	{
-		a++;
-		_putchar(',');
-		_putchar(' ');
-		_putchar('0' + a);
+		while (a <= 98)
+		{
+			a++;
+			_putchar(',');
+			_putchar(' ');
+			_putchar('0' + a);
+		}
 	}
-
-	while (a >= 98)
+	else if (a > 98)
 	{
-		a--;
-		_putchar(',');
-		_putchar(' ');
-		_putchar('0' + a);
+		while (a >= 98)
+		{
+			a--;
+			_putchar(',');
+			_putchar(' ');
+			_putchar('0' + a);
+		}
+	}
+	else
+	{
+		_putchar('0' + 98);
 	}
 }
-	
