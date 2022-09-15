@@ -8,26 +8,21 @@
 
 void print_to_98(int a)
 {
-	printf("%d", a);
 	if (a < 98)
 	{
-		while (a <= 98)
+		while (a < 98)
 		{
+			printf("%d, ",a);
 			a++;
-			printf(", %d",a);
 		}
 	}
 	else if (a > 98)
 	{
-		while (a >= 98)
+		while (a > 98)
 		{
+			printf("%d, ", a);
 			a--;
-			printf(", %d", a);
 		}
 	}
-	else
-	{
-		printf("");
-	}
-	printf("\n");
+	printf("98\n");
 }
