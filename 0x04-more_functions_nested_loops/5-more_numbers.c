@@ -28,7 +28,7 @@ void more_numbers(void)
  * Return: void
  */
 
-void putchar_long(int c)
+void ptchar_long(int c)
 {
 	if (c / 10)
 	{
