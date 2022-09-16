@@ -7,5 +7,5 @@ void print_numbers(void);
 int _putchar(int);
 void print_most_numbers(void);
 void more_numbers(void);
-void putchar_long(int c);
+void ptchar_long(int c);
 #endif

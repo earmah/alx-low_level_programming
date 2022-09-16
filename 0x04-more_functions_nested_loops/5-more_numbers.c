@@ -14,7 +14,7 @@ void more_numbers(void)
 	{
 		for (curr_val = 0; curr_val < 15; ++curr_val)
 		{
-				putchar_long(curr_val);
+				ptchar_long(curr_val);
 		}
 		_putchar('\n');
 		curr_val = 0;
@@ -32,7 +32,7 @@ void putchar_long(int c)
 {
 	if (c / 10)
 	{
-		putchar_long(c / 10);
+		ptchar_long(c / 10);
 	}
 	_putchar(c % 10 + '0');
 }
