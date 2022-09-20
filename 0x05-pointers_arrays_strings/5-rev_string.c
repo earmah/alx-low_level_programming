@@ -20,6 +20,6 @@ void rev_string(char *s)
 		count--;
 		revs = s[i];
 		s[i] = s[count];
-		s[count] = rev;
+		s[count] = revs;
 	}
 }
