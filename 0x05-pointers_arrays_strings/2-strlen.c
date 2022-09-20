@@ -7,5 +7,11 @@
 
 int _strlen(char *s)
 {
-	return (sizeof(*s));
+	int sze = 0;
+
+	while (*s != '\0')
+	{
+		sze++;
+	}
+	return (sze);
 }
