@@ -7,14 +7,11 @@
 
 void print_rev(char *s)
 {
-	char str[] = "";
 	int count = 0;
 
-	while (*s != '\0')
+	while (s[count] != '\0')
 	{
-		str[count] = *s;
 		count++;
-		s++;
 	}
 	
 	while (count >= 0)
