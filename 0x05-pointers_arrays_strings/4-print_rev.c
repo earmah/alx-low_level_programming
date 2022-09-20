@@ -17,9 +17,10 @@ void print_rev(char *s)
 		s++;
 	}
 
-	for (count; count > -1; --count)
+	while (count > -1)
 	{
 		_putchar(str[count]);
+		count--;
 	}
 	_putchar('\n');
 }
