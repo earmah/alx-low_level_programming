@@ -11,6 +11,7 @@ int main(void)
 	char s2[] = "World!\n";
 	char *ptr;
 
+	printf("%s , %s\n", s1, s2);
 	ptr = _strcat(s1, s2);
 	printf("%s", ptr);
 	return (0);
