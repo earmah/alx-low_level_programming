@@ -18,13 +18,12 @@ char *_strcat(char *dest, char *src)
 		dest_pt_count++;
 	}
 	/* Replace null byte with first elem of src */
-	while (*src != '\0')
+	while (src[src_pt_count])
 	{
 		dest[dest_pt_count++] = src[src_pt_count];
 		src_pt_count++;
-		src++;
+		
 	}
-	dest[dest_pt_count++] = '\0';
 	return (dest);
 }
 
