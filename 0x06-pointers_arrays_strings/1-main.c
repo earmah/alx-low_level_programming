@@ -12,7 +12,7 @@ int main(void)
 	char s2[] = "world!\n";
 	char *ptr;
 
-	ptr = _strncat(s1,s2, 1);
+	ptr = _strncat(s1, s2, 1);
 	printf("%s\n", ptr);
 	ptr = _strncat(s1, s2, 1024);
 	printf("%s\n", ptr);
