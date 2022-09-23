@@ -3,6 +3,7 @@
  * _strncat - concatenates 2 str's using n bytes from src
  * @src: param str to add
  * @dest: param str to be added to
+ * @n:num of bytes to append
  * Return: concatenated str
  */
 
