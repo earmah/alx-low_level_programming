@@ -22,6 +22,7 @@ char *_strcat(char *dest, char *src)
 	{
 		dest[dest_pt_count++] = src[src_pt_count];
 		src_pt_count++;
+		src++;
 	}
 	dest[dest_pt_count++] = '\0';
 	return (dest);
