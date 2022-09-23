@@ -1,0 +1,1 @@
+understading pointers and arrays
