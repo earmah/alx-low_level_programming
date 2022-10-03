@@ -7,8 +7,8 @@
  * Return: 0
  */
 
-int main (int c, char *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%d\n", c - 1);
-	return (0)
+	printf("%d\n", argcc - 1);
+	return (0);
 }
