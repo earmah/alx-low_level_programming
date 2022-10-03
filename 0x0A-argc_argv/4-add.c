@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * main - entry point; adds numbers
- * @argc: num of elems
- * @argv: elems
- * Return: 0
+ * isInt - check if all elem are digits
+ * @c: param to check
+ * Return: 0 or 1
  */
 
 int isInt(char *c)
@@ -23,6 +22,13 @@ int isInt(char *c)
 	}
 	return (1);
 }
+
+/**
+ * main - entry point
+ * @argc: num of elems
+ * @argv: elems to add
+ * Return: 0
+ */
 
 int main(int argc, char *argv[])
 {
