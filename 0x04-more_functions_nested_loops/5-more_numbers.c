@@ -10,29 +10,16 @@ void more_numbers(void)
 	int level;
 	int curr_val;
 
-	for (level = 0; level < 10; ++level)
+	for (level = 0; level < 10; level++)
 	{
-		for (curr_val = 0; curr_val < 15; ++curr_val)
+		for (curr_val = 0; curr_val < 15; curr_val++)
 		{
-				ptchar_long(curr_val);
+			if (curr_val >= 10)
+			{
+				_putchar(curr_val / 10 + '0');
+				_putchar(curr_val % 10 + '0');
+			}
 		}
 		_putchar('\n');
-		curr_val = 0;
 	}
-	_putchar('\n');
-}
-
-/**
- * putchar_long - converts and prints long ints using putchar
- * @c: long int
- * Return: void
- */
-
-void ptchar_long(int c)
-{
-	if (c / 10)
-	{
-		ptchar_long(c / 10);
-	}
-	_putchar(c % 10 + '0');
 }
