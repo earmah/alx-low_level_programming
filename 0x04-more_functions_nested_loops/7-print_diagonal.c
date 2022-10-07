@@ -15,13 +15,19 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (pos = 1; pos <= n; ++pos)
+		for (pos = 0; pos < n; pos++)
 		{
-			for (spc = 1; spc <= pos; ++spc)
+			for (spc = 0; spc < pos; spc++)
 			{
-				_putchar(' ');
+				if (pos == spc)
+				{
+					_putchar('\\');
+				}
+				else if (spc < pos)
+				{
+					_putchar(' ');
+				}
 			}
-			_putchar(92);
 			_putchar('\n');
 		}
 	}
