@@ -10,7 +10,7 @@ int main(void)
 
 	for (hundred = '0'; hundred <= '9'; hundred++)
 	{
-		for (ten = (hundred + 1); ten <= '9; ten++)
+		for (ten = (hundred + 1); ten <= '9'; ten++)
 		{
 			for (one = (ten + 1); one <= '9'; one++)
 			{
