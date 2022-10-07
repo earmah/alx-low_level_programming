@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - entry point; print numbers 1 to 100; mults of 3(fizz)
+ * main - entry point_ print numbers 1to 100_ m of 3(fizz)
  * mults of 5(buzz)
  *
  * Return: 0
