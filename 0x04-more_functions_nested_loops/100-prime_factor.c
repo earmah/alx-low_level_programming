@@ -27,9 +27,6 @@ double _sroot(double i)
 
 void largest_prime(long int num)
 {
-	
-	
-	
 	int prm_num, largest;
 
 	while (num % 2 == 0)
