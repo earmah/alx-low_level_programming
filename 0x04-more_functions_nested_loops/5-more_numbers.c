@@ -9,16 +9,19 @@ void more_numbers(void)
 {
 	int level;
 	int curr_val;
+	int count;
 
-	for (level = 0; level < 10; level++)
+	for (level = 1; level <= 10; ++level)
 	{
-		for (curr_val = 0; curr_val < 15; curr_val++)
+		for (curr_val = 0; curr_val <= 14; ++curr_val)
 		{
-			if (curr_val >= 10)
+			count = curr_val;
+			if (curr_val > 9)
 			{
-				_putchar(curr_val / 10 + '0');
-				_putchar(curr_val % 10 + '0');
+				_putchar(1 + 48);
+				count = curr_val % 10;
 			}
+			_putchar(count + 48);
 		}
 		_putchar('\n');
 	}
