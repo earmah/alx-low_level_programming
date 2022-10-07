@@ -34,7 +34,7 @@ void largest_prime(long int num)
 		num = num / 2;
 	}
 	
-	for (prn_num = 3; prm_num <= _sroot(num); prm_num += 2)
+	for (prm_num = 3; prm_num <= _sroot(num); prm_num += 2)
 	{
 		while (num % prm_num == 0)
 		{
