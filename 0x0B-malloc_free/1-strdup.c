@@ -14,14 +14,14 @@ char *_strdup(char *str)
 	int count;
 	int i;
 
-	if (str == '\0')
+	if (*str == '\0')
 	{
 		return (NULL);
 	}
 	else
 	{
 		/* Determine the size of the str*/
-		while (str != '\0')
+		while (*str != '\0')
 		{
 			count++;
 			str++;
