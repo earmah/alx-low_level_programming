@@ -37,7 +37,7 @@ char *_strdup(char *str)
 		dup = malloc(count * sizeof(char));
 		for (i = 0; i < count; i++)
 		{
-			dup[i] = str;
+			dup[i] = *str;
 			str++;
 		}
 	}
