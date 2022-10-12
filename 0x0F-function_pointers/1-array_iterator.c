@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * array_iterator - executes a fcn for each elem
  * of an array
