@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * cap_string - a fcn that capitalizes all words of a str
  * @s: str to be altered
@@ -7,17 +8,26 @@
 
 char *cap_string(char *s)
 {
-	while (*s != '\0')
+	int count = 0;
+
+	while (s[count] != '\0')
 	{
-		while (*s != ' ' || *s != '.')
+		if (s[count] == 32 || s[count] == 46)
 		{
-			if (*s > 96 && *s < 123)
-			{
-				*s -= 32;
-			}
-			s++;
+			count++;
 		}
-		s++;
+		else
+		{
+			/*printf("Passed 2nd while loop\n");*/
+			if (s[count - 1] == 32 && s[count] > 96 && s[count] < 123)
+			{
+				/*printf("entered for loop\n");*/
+				/*printf("Curr S: %s\n", s);*/
+				s[count] -= 32;
+			}
+			count++;
+		}
 	}
+	printf("%s", s);
 	return (s);
 }
