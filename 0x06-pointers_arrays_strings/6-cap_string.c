@@ -7,5 +7,17 @@
 
 char *cap_string(char *s)
 {
-	return ('\0');
+	while (*s != '\0')
+	{
+		while (*s != ' ' || *s != '.')
+		{
+			if (*s > 96 && *s < 123)
+			{
+				*s -= 32;
+			}
+			s++;
+		}
+		s++;
+	}
+	return (s);
 }
