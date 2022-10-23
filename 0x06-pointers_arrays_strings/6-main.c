@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char str[] = "Expect the best.";
+	char str[] = "Captalize on what comes. \nhello world! hello-world";
 	/*Prepare for the worst.  Capitalize on what comes.*/
 	/*\nhello world! hello-world */
 	/*012345hello world\thello world.hello world\n*/
