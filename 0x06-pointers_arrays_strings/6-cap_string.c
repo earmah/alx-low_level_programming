@@ -19,7 +19,9 @@ char *cap_string(char *s)
 		else
 		{
 			/*printf("Passed 2nd while loop\n");*/
-			if ((s[count - 1] == 46 || s[count - 1] == 32 || s[count - 1] == '\n' || s[count - 1] == '\t') && s[count] > 96 && s[count] < 123)
+			if ((s[count - 1] == 46 || s[count - 1] == 32 ||
+				s[count - 1] == '\n' || s[count - 1] == '\t')
+					&& s[count] > 96 && s[count] < 123)
 			{
 				/*printf("entered for loop\n");*/
 				/*printf("Curr S: %s\n", s);*/
