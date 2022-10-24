@@ -11,8 +11,8 @@ char *cap_string(char *s)
 	int count = 0;
 
 	/*Determine end of str */
-	
-	
+
+
 	while (s[count] != '\0')
 	{
 		/*Check if first char needs capitalization*/
