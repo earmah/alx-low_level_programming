@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * cap_string - a fcn that capitalizes all words of a str
  * @s: str to be altered
