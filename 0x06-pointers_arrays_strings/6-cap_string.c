@@ -34,6 +34,5 @@ char *cap_string(char *s)
 			count++;
 		}
 	}
-	printf("%s", s);
 	return (s);
 }
