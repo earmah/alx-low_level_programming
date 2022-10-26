@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strspn - gets the length of a prefix substr
  * @s: initial str
@@ -18,7 +18,6 @@ unsigned int _strspn(char *s, char *accept)
 		/*num of char in accept arg */
 		acc_val += 1;
 	}
-	printf("Number of char in accept: %d", acc_val);
 
 	while (s[count_str] != '\0')
 	{
@@ -44,6 +43,5 @@ unsigned int _strspn(char *s, char *accept)
 			count_str++;
 		}
 	}
-	printf("Len var: %d", len);
 	return (len);
 }
