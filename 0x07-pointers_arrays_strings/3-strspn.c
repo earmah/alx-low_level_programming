@@ -10,7 +10,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	/*Vars to count num of char in args, and num of matches */
-	unsigned int count_cmp, len, acc_val, count_str = 0;
+	unsigned int count_cmp, len = 0, acc_val = 0, count_str = 0;
 	int is_found = 0;
 
 	for (count_cmp = 0; accept[count_cmp] != '\0'; count_cmp++)
