@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_diagsums - prints the sum of two diags of sq matrix
  * @a: matrix of integers
@@ -35,9 +35,6 @@ void print_diagsums(int *a, int size)
 		left_count++;
 	}
 
-
-	_putchar(leftsum);
-	_putchar(", ");
-	_putchar(rightsum);
+	printf("%d, %d\n", left_sum, right_sum);
 }
 
