@@ -10,7 +10,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	
+
 	/*Parse each elem and add to left and right sum*/
 	int left_count = 1, right_count = 1;
 	int left_sum = 0, right_sum = 0;
@@ -21,9 +21,9 @@ void print_diagsums(int *a, int size)
 
 	for (count = 1; count < (size * size); count++)
 	{
-		if (right_count % (size - 1) == 0 && (size * size) - count >= size )
+		if (right_count % (size - 1) == 0 && (size * size) - count >= size)
 		{
-			right_sum += a[count]; 
+			right_sum += a[count];
 			right_count = 0;
 		}
 		if (left_count % (size + 1) == 0)
