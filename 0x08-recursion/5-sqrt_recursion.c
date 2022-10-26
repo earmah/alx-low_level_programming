@@ -3,6 +3,7 @@
 /**
  * recursion_wrapper - estimates sqrt root and calculates square rt
  * @lower_bd: lower bound estimation val
+ * @num: original squared value
  *
  * Return: possible sqrt
  */
