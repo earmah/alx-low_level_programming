@@ -11,7 +11,11 @@
 
 int palindrome_wrapper(int forward, char *s, int back)
 {
-	while (forward != back || back - forward > 1)
+	if (s[forward] != s[back])
+	{
+		return (0);
+	}
+	else if (forward == back || back - forward < 1)
 	{
 		if (s[forward] != s[back])
 		{
@@ -19,10 +23,33 @@ int palindrome_wrapper(int forward, char *s, int back)
 		}
 		else
 		{
-			return (1 * palindrome_wrapper(forward + 1, s, back - 1));
+			return (1);
 		}
 	}
-	return (1);
+	else
+	{
+		return (1 * palindrome_wrapper(forward + 1, s, back - 1));
+	}
+}
+
+/**
+ * str_size - calculate the num of char in a str
+ * @s: string
+ * @count: curr num of char
+ *
+ * Return: num of char
+ */
+
+int str_size(char *s, int count)
+{
+	if (s[count] != '\0')
+	{
+		return (str_size(s, count + 1));
+	}
+	else
+	{
+		return (count);
+	}
 }
 
 /**
@@ -34,12 +61,9 @@ int palindrome_wrapper(int forward, char *s, int back)
 
 int is_palindrome(char *s)
 {
-	int i, forward = 0, back = 0;
+	int forward = 0, back = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		back += 1;
-	}
+	back = str_size(s, back);
 
 	back -= 1;
 
