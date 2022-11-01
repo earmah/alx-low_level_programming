@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _strspn - gets the length of a prefix substr
  * @s: initial str
@@ -7,27 +9,39 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int count, r, c;
+	/*Vars to count num of char in args, and num of matches */
+	unsigned int count_cmp, len = 0, acc_val = 0, count_str = 0;
+	int is_found = 0;
 
-	count = 0;
-	while (s[count] != '\0')
+	for (count_cmp = 0; accept[count_cmp] != '\0'; count_cmp++)
 	{
-		r = 0;
-		c = 0;
-		while (accept[r] != '\0')
-		{
-			if (s[count] == accept[r])
-			{
-				c = 0;
-				break;
-			}
-			r++;
-		}
-		if (c == 1)
-		{
-			break;
-		}
-		count++;
+		/*num of char in accept arg */
+		acc_val += 1;
 	}
-	return (count);
+
+	while (s[count_str] != '\0')
+	{
+		/*Iterate through accept and cmp each char with curr s*/
+		for (count_cmp = 0; count_cmp < acc_val; count_cmp++)
+		{
+			if (s[count_str] == accept[count_cmp])
+			{
+				len += 1;
+				is_found = 1;
+			}
+		}
+
+		count_cmp = 0;
+
+		if (is_found == 0)
+		{
+			return (len);
+		}
+		else
+		{
+			is_found = 0;
+			count_str++;
+		}
+	}
+	return (len);
 }
