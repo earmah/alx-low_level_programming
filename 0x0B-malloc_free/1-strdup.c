@@ -11,10 +11,10 @@
 char *_strdup(char *str)
 {
 	char *dup;
-	int count;
+	int count = 0;
 	int i;
 
-	if (*str == '\0')
+	if (*str == '\0' || str == NULL)
 	{
 		return (NULL);
 	}
@@ -28,20 +28,26 @@ char *_strdup(char *str)
 		}
 
 		/* Return pointer back ot origin*/
-		for (i = 0; i <= count; i++)
+		for (i = 0; i < count; i++)
 		{
 			str--;
 		}
 
 		/* Copy str to duplicate string dup*/
-		dup = malloc(count * sizeof(char));
+		dup = malloc(sizeof(char) * count);
+
+		/*Check if memory allocation was successful*/
+		if (dup == NULL)
+		{
+			free(dup);
+			return (NULL);
+		}
+
 		for (i = 0; i < count; i++)
 		{
 			dup[i] = *str;
 			str++;
 		}
 	}
-
 	return (dup);
-	free(dup);
 }
