@@ -3,22 +3,23 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for the ALX School students
+ * main - check the code for ALX School students.
  *
- * Return: Always 0
+ * Return: 0
  */
 
 int main(void)
 {
 	char *s;
 
-	s = _strdup("");
+	s = str_concat("Betty ", "Holberton");
 	if (s == NULL)
 	{
-		printf("failed to allocate memory\n");
+		printf("failed\n");
 		return (1);
 	}
+
 	printf("%s\n", s);
 	free(s);
-	return (0);
+	return(0);
 }
