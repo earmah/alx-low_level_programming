@@ -1,10 +1,9 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
  * str_count - count len of s
- * @s: str to count
+ * @s: first str to count
  *
  * Return: size of s
  */
@@ -36,21 +35,21 @@ int str_count(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, count1 = 0, j = 0, count2 = 0, tot_count = count1 + count2;
+	int i, count1 = 0, j = 0, count2 = 0;
 	char *s_conc;
 
-	count1 = str_count(s1); /*count str len*/
-	count2 = str_count(s2);
+	count1 = str_count(s1);
+	count2 = str_count(s2); /*count str len*/
 	s_conc = malloc(sizeof(char) * (count1 + count2));
 	if (s_conc == NULL)
 	{
 		return (NULL);
 	}
-	if (tot_count == 0)
+	if (count1 + count2 == 0)
 	{
 		return ('\0');
 	}
-	else if (tot_count == count1)
+	else if (count2 == 0)
 	{
 		for (i = 0; i < count1; i++)
 		{
@@ -58,7 +57,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		return (s_conc);
 	}
-	else if (tot_count == count2)
+	else if (count1 == 0)
 	{
 		for (i = 0; i < count2; i++)
 		{
@@ -70,10 +69,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		s_conc[i] = s1[i];
 	}
-	for (i = count1; i <= (count1 + count2); i++)
+	for (i = count1, j = 0; i <= (count1 + count2); i++, j++)
 	{
 		s_conc[i] = s2[j];
-		j++;
 	}
 	return (s_conc);
 }
