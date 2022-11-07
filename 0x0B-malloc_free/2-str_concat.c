@@ -39,17 +39,13 @@ char *str_concat(char *s1, char *s2)
 	int i, count1 = 0, j = 0, count2 = 0, tot_count;
 	char *s_conc;
 
-	if (!s1 && !s2)
-	{
-		return (NULL);
-	}
 	count1 = str_count(s1); /*count str len*/
 	count2 = 1;
 	count2 = str_count(s2);
 	tot_count = count1 + count2;
 
 	s_conc = malloc(sizeof(char) * (count1 + count2));
-	if (tot_count == count1 && tot_count == count2)
+	if (tot_count == 0)
 	{
 		*s_conc = '\0';
 		return (s_conc);
@@ -69,6 +65,10 @@ char *str_concat(char *s1, char *s2)
 			s_conc[i] = s2[i];
 		}
 		return (s_conc);
+	}
+	for (i = 0; i <= count1; i++)
+	{
+		s_conc[i] = s1[i];
 	}
 	for (i = count1; i <= (count1 + count2); i++)
 	{
