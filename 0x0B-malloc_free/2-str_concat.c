@@ -40,20 +40,14 @@ char *str_concat(char *s1, char *s2)
 	char *s_conc;
 
 	count1 = str_count(s1); /*count str len*/
-	count2 = 1;
 	count2 = str_count(s2);
 	tot_count = count1 + count2;
-
 	s_conc = malloc(sizeof(char) * (count1 + count2));
 	if (s_conc == NULL)
-	{
 		return (NULL);
-	}
 	if (tot_count == 0)
-	{
 		*s_conc = '\0';
 		return (s_conc);
-	}
 	else if (tot_count == count1)
 	{
 		for (i = 0; i < count1; i++)
