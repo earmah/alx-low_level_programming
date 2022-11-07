@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	int i, count1 = 0, j = 0, count2 = 0;
 	char *s_conc;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 	{
 		return (NULL);
 	}
