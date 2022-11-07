@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 
 	count1 = str_count(s1);
 	count2 = str_count(s2); /*count str len*/
-	s_conc = malloc(sizeof(char) * (count1 + count2));
+	s_conc = malloc(sizeof(char) * (1 + count1 + count2));
 	if (s_conc == NULL)
 	{
 		return (NULL);
@@ -73,6 +73,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s_conc[i] = s2[j];
 	}
+	s_conc[i] = '\0';
 	return (s_conc);
 }
 
