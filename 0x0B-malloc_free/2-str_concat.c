@@ -45,6 +45,10 @@ char *str_concat(char *s1, char *s2)
 	tot_count = count1 + count2;
 
 	s_conc = malloc(sizeof(char) * (count1 + count2));
+	if (s_conc == NULL)
+	{
+		return (NULL);
+	}
 	if (tot_count == 0)
 	{
 		*s_conc = '\0';
