@@ -45,8 +45,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	count1 = str_count(s1); /*count str len*/
 	count2 = 1;
-	count2 = str_count(s2)
-	tot_count = count1 + count2
+	count2 = str_count(s2);
+	tot_count = count1 + count2;
 
 	s_conc = malloc(sizeof(char) * (count1 + count2));
 	if (tot_count == count1 && tot_count == count2)
