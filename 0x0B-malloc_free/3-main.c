@@ -41,13 +41,14 @@ int main(void)
 	grid = alloc_grid(48, 32);
 	if (grid == NULL)
 	{
+		printf("failed\n");
 		return (1);
 	}
 	print_grid(grid, 48, 32);
 	printf("\n");
-	grid[0][3] = 98;
-	grid[3][4] = 402;
-	print_grid(grid, 48, 32);
-	free(grid);
+	/*grid[0][3] = 98;*/
+	/*grid[3][4] = 402;*/
+	/*print_grid(grid, 48, NULL);*/
+
 	return (0);
 }
