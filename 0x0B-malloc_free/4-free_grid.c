@@ -2,14 +2,14 @@
 #include "main.h"
 
 /**
- * free_grid - free a 2d grid 
+ * free_grid - free a 2d grid
  * @grid: 2d grid
  * @height: num of rows
  *
  * Return: void
  */
 
-void free_grid(int ** grid, int height)
+void free_grid(int **grid, int height)
 {
 	int count;
 
