@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strdup - returns a pointer to a newly alloc space in mem
  * which contains a copy of the str givn as a param
@@ -25,7 +25,6 @@ char *_strdup(char *str)
 		{
 			count++;
 		}
-		printf("Count: %d\n", count);
 
 		/* Copy str to duplicate string dup*/
 		dup = malloc(sizeof(char) * (count));
@@ -39,7 +38,6 @@ char *_strdup(char *str)
 		for (i = 0; i < count; i++)
 		{
 			dup[i] = str[i];
-			printf("Dup[i]: %d\nStr[i]: %d\n", dup[i], str[i]);
 		}
 	}
 	return (dup);
