@@ -21,18 +21,11 @@ char *_strdup(char *str)
 	else
 	{
 		/* Determine the size of the str*/
-		while (*str != '\0')
+		for (i = 0; str[i] != '\0'; i++)
 		{
 			count++;
-			str++;
 		}
 		printf("Count: %d\n", count);
-
-		/* Return pointer back ot origin*/
-		for (i = 0; i < count; i++)
-		{
-			str--;
-		}
 
 		/* Copy str to duplicate string dup*/
 		dup = malloc(sizeof(char) * (count));
@@ -46,6 +39,7 @@ char *_strdup(char *str)
 		for (i = 0; i < count; i++)
 		{
 			dup[i] = str[i];
+			printf("Dup[i]: %d\nStr[i]: %d\n", dup[i], str[i]);
 		}
 	}
 	return (dup);
