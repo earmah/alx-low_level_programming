@@ -45,6 +45,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	clc = _memset(clc, 0, nmemb);
+	clc = _memset(clc, 0, nmemb * size);
 	return (clc);
 }
