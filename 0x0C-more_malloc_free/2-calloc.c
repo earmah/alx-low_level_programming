@@ -2,13 +2,15 @@
 #include "main.h"
 
 /**
- * _memset - initialize array to 
+ * _memset - initialize array to c
  * @arr: array
  * @c: constant byte to fill arr
  * @size: size of array/ num of elems
+ *
+ * Return: array init to c
  */
 
-unsigned int *_memset(unsigned int *arr, unsigned int c, unsigned int size)
+char *_memset(char *arr, char c, unsigned int size)
 {
 	unsigned int count;
 
@@ -20,7 +22,7 @@ unsigned int *_memset(unsigned int *arr, unsigned int c, unsigned int size)
 }
 
 /**
- * calloc - allocates memory for an array using malloc
+ * _calloc - allocates memory for an array using malloc
  * @nmemb: num of elems in array
  * @size: bit size of elem in array
  *
@@ -30,7 +32,6 @@ unsigned int *_memset(unsigned int *arr, unsigned int c, unsigned int size)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *clc;
-	unsigned int init = 0;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -44,6 +45,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	_memset(clc, init, nmemb);
+	clc = _memset(clc, 0, nmemb);
 	return (clc);
 }
