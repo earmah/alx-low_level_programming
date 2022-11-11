@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * str_ln - size of str
@@ -58,15 +57,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1_ln = str_ln(s1);
 		s2_ln = str_ln(s2);
 	}
-	printf("Str 1 len: %d\nStr 2 len: %d\n", s1_ln, s2_ln);
 	conc = malloc(sizeof(char) * (s1_ln + min(n, s2_ln) + 1));
 	if (conc == NULL)
 		return (NULL);
 
-	for (count = 0; count <= s1_ln; count++)
+	for (count = 0; count < s1_ln; count++)
 	{
 		conc[count] = s1[count];
-		printf("Current s1 char: %c\n", s1[count]);
 	}
 	if (s2_ln == 0)
 		return (conc);
@@ -75,11 +72,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (count = 0; count < min(n, s2_ln); count++)
 		{
 			conc[count] = s2[count];
-			printf("Current s2 char: %c\n", s2[count]);
 		}
 		return (conc);
 	}
-	for (count = s1_ln, i = 0; count <= s1_ln + n; count++, i++)
+	for (count = s1_ln, i = 0; count < s1_ln + min(n, s2_ln); count++, i++)
 	{
 		conc[count] = s2[i];
 	}
