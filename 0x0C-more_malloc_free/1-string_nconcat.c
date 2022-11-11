@@ -52,8 +52,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	s1_ln = str_ln(s1);
 	s2_ln = str_ln(s2);
-	if (str_ln(s1) + str_ln(s2) == 0)
-		return ('\0');
 	conc = malloc(sizeof(char) * (s1_ln + min(n, s2_ln) + 1));
 	if (conc == NULL)
 		return (NULL);
