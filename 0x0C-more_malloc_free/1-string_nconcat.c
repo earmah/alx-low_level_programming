@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * str_ln - size of str
@@ -23,6 +24,18 @@ int str_ln(char *s)
 	}
 	return (i);
 }
+/**
+ * min - returns the lesser of 2 ints
+ * @a: first int
+ * @b: second int
+ *
+ * Return: smallest int
+ */
+
+unsigned int min(unsigned int a, unsigned int b)
+{
+	return (a < b) ? a : b;
+}	
 
 /**
  * string_nconcat - concats two strings
@@ -38,41 +51,38 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *conc;
 	unsigned int i = 0, count, s1_ln, s2_ln;
 
-	s1_ln = str_ln(s1);
-	s2_ln = str_ln(s2);
-	conc = malloc(sizeof(char) * (s1_ln + n + 1));
-	if (conc == NULL)
-	{
-		return (NULL);
-	}
-	if (s1_ln + s2_ln == 0)
-	{
+	if (str_ln(s1) + str_ln(s2) == 0)
 		return ("");
-	}
-	else if (s2_ln == 0)
+	else
 	{
-		for (count = 0; count <= s1_ln; count++)
-		{
-			conc[count] = s1[count];
-		}
-		return (conc);
+		s1_ln = str_ln(s1);
+		s2_ln = str_ln(s2);
 	}
+	printf("Str 1 len: %d\nStr 2 len: %d\n", s1_ln, s2_ln);
+	conc = malloc(sizeof(char) * (s1_ln + min(n, s2_ln) + 1));
+	if (conc == NULL)
+		return (NULL);
+
+	for (count = 0; count <= s1_ln; count++)
+	{
+		conc[count] = s1[count];
+		printf("Current s1 char: %c\n", s1[count]);
+	}
+	if (s2_ln == 0)
+		return (conc);
 	else if (s1_ln == 0)
 	{
-		for (count = 0; count < n; count++)
+		for (count = 0; count < min(n, s2_ln); count++)
 		{
 			conc[count] = s2[count];
-			return (conc);
+			printf("Current s2 char: %c\n", s2[count]);
 		}
-		for (; s2_ln < n; count++)
-		{
-			conc[count] = '\0';
-		}
+		return (conc);
 	}
 	for (count = s1_ln, i = 0; count <= s1_ln + n; count++, i++)
 	{
 		conc[count] = s2[i];
 	}
-	conc[count++] = '\0';
+	conc[count] = '\0';
 	return (conc);
 }
