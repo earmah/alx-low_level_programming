@@ -63,7 +63,7 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-	str_arr = malloc(sizeof(char) * (1 + word_count));
+	str_arr = malloc(sizeof(char *) * (1 + word_count));
 	check_mal(str_arr[0]);
 	for (count = 0; str[count]; count++)
 	{
