@@ -49,7 +49,7 @@ char **strtow(char *str)
 	int index = 0, t = 0, count = 0, word_count = 0;
 	int temp_word_ln;
 
-	if (str == NULL)
+	if (*str == '\0' || *str == ' ' || str == NULL)
 	{
 		return (NULL);
 	}
