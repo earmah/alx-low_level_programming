@@ -49,10 +49,6 @@ char **strtow(char *str)
 	int index = 0, t = 0, count = 0, word_count = 0;
 	int temp_word_ln;
 
-	if (*str == '\0' || *str == ' ' || str == NULL)
-	{
-		return (NULL);
-	}
 	while (*(str + count)) /*Determine num of wrds in arr*/
 	{
 		if (*(str + count) != ' ')
@@ -62,6 +58,10 @@ char **strtow(char *str)
 			count += temp_word_ln; /*Temp used to alt countertonxt spc*/
 		}
 		count++;
+	}
+	if (*str == '\0' || *str == ' ' || str == NULL)
+	{
+		return (NULL);
 	}
 	str_arr = malloc(sizeof(char *) * (1 + word_count));
 	check_mal(str_arr[0]);
