@@ -59,7 +59,7 @@ char **strtow(char *str)
 		}
 		count++;
 	}
-	if (*str == '\0' || *str == ' ' && word_count == 0 || str == NULL)
+	if (*str == '\0' || (*str == ' ' && word_count == 0) || str == NULL)
 	{
 		return (NULL);
 	}
