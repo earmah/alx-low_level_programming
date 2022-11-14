@@ -3,26 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
-/**
- * check_mal - check if mal is NULL
- * @ptr: ptr to malloc
- *
- * Return: char * to ptr or NULL
- */
-
-char *check_mal(char *ptr)
-{
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		return (ptr);
-	}
-}
-
 /**
  * new_dog - creates a new dog using typedef
  * @name: name of dog
@@ -44,20 +24,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	n_dog->name = malloc(sizeof(char) * (strlen(name) + 1));
-	check_mal(n_dog->name);
+	if (n_dog->name == NULL)
+	{
+		free(n_dog);
+		return (NULL);
+	}
 	strcpy(n_dog->name, name);
 
 	n_dog->owner = malloc(sizeof(char) * (strlen(owner) + 1));
-	check_mal(n_dog->owner);
-	strcpy(n_dog->owner, owner);
-
-	n_dog->age = age;
-
-	if (n_dog == NULL || n_dog->name == NULL || n_dog->owner == NULL)
+	if (n_dog->owner == NULL)
 	{
 		free(n_dog);
 		free(n_dog->name);
-		free(n_dog->owner);
+		return (NULL);
 	}
+
+	strcpy(n_dog->owner, owner);
+
+	n_dog->age = age;
 	return (n_dog);
 }
