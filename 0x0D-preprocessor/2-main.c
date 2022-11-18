@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point to print name of file 
+ * main - entry point to print name of file
  * it was compiled from
  *
  * Return: 0
