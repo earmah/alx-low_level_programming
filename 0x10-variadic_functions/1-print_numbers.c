@@ -12,24 +12,22 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int count, curr_val;
+	unsigned int count;
 	va_list args;
 	int sep_count = 0, sep;
 
 	/*Count num of elems in separator*/
-	for (count = 0; *separator != '\0'; count++)
+	for (count = 0; separator[count] != '\0'; count++)
 	{
 		sep_count++;
 	}
-	printf("Separator count: %d\n", sep_count);
 
 	va_start(args, n);
 
 	for (count = 0; count < n - 1; count++)
 	{
-		curr_val = va_arg(args, unsigned int);
-		printf("%u", curr_val);
-		if (*separator)
+		printf("%u", va_arg(args, const unsigned int));
+		if (*separator || *separator != '\0')
 		{
 			for (sep = 0; separator[sep] != '\0'; sep++)
 			{
@@ -37,7 +35,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			}
 		}
 	}
-	printf("%u\n", va_arg(args, unsigned int));
+	printf("%u\n", va_arg(args, const unsigned int));
 
 	va_end(args);
 }
