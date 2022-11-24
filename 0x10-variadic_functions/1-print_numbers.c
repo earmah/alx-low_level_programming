@@ -11,36 +11,30 @@
  * Return: void
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_numbers(const char *separator , const unsigned int n, ...)
 {
 	unsigned int count;
 	va_list args;
-	int sep_count = 0, sep;
-
-
-	/*Count num of elems in separator*/
-	if (*separator)
-	{
-		for (count = 0; separator[count] != '\0'; count++)
-		{
-			sep_count++;
-		}
-	}
 
 	va_start(args, n);
 
-	for (count = 0; count < n - 1; count++)
+	if (n > 0)
 	{
-		printf("%d", va_arg(args, const unsigned int));
-		if (separator || separator[0] != '\0')
+		for (count = 0; count < n - 1; count++)
 		{
-			for (sep = 0; sep < sep_count; sep++)
+			printf("%d", va_arg(args, const unsigned int));
+			if (separator)
 			{
-				printf("%c", separator[sep]);
+				printf("%s", separator);
 			}
+
 		}
+		printf("%d\n", va_arg(args, const unsigned int));
 	}
-	printf("%d\n", va_arg(args, const unsigned int));
+	else
+	{
+		printf("\n");
+	}
 
 	va_end(args);
 }
