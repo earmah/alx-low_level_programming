@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * print_strings - prints strings followed by new line
  * @separator: str to be printed in b/n each str
@@ -23,17 +24,28 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		for (count = 0; count < n - 1; count++)
 		{
 			temp_str = va_arg(args, char *);
-			if (!temp_str)
+			if (temp_str)
 			{
-				temp_str = "(nil)";
+				printf("%s", temp_str);
 			}
-			printf("%s", temp_str);
+			else
+			{
+				printf("(nil)");
+			}
 			if (separator)
 			{
 				printf("%s", separator);
 			}
 		}
-		printf("%s\n", va_arg(args, char *));
+		temp_str = va_arg(args, char *);
+		if (!temp_str)
+		{
+			printf("(nil)\n");
+		}
+		else
+		{
+			printf("%s\n", temp_str);
+		}
 	}
 	else
 	{
