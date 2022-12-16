@@ -80,6 +80,11 @@ void print_all(const char * const format, ...)
 	va_list args;
 	int count = 0;
 
+	while (!format)
+	{
+		printf("\n");
+		exit(0);
+	}
 	va_start(args, format);
 	while (format[count] != '\0')
 	{
@@ -107,6 +112,6 @@ void print_all(const char * const format, ...)
 		}
 		count++;
 	}
-	printf("\n");
 	va_end(args);
+	printf("\n");
 }
